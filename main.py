@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+
 import os
 import signal
 import sys
@@ -5,6 +7,8 @@ import sys
 from elevenlabs.client import ElevenLabs
 from elevenlabs.conversational_ai.conversation import Conversation
 from elevenlabs.conversational_ai.default_audio_interface import DefaultAudioInterface
+
+load_dotenv()
 
 def main():
     AGENT_ID=os.environ.get('AGENT_ID')
