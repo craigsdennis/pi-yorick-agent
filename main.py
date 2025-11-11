@@ -8,6 +8,8 @@ from elevenlabs.client import ElevenLabs
 from elevenlabs.conversational_ai.conversation import Conversation
 from elevenlabs.conversational_ai.default_audio_interface import DefaultAudioInterface
 
+import yorick
+
 load_dotenv()
 
 def main():
@@ -47,7 +49,7 @@ def main():
         callback_agent_response=lambda response: print(f"Agent: {response}"),
         callback_agent_response_correction=lambda original, corrected: print(f"Agent: {original} -> {corrected}"),
         callback_user_transcript=lambda transcript: print(f"User: {transcript}"),
-        callback_agent_chat_response_part=lambda part: print("Part: {part}")
+        callback_agent_chat_response_part=lambda part: yorick.move_randomly()
         # callback_latency_measurement=lambda latency: print(f"Latency: {latency}ms"),
     )
     conversation.start_session()
