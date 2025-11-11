@@ -16,12 +16,12 @@ def get_available_action_groups():
 
 def create_random_action_group():
     create_action_group(uuid.uuid4(), [{
-        "Time": random.randint(500, 1000),
-        "Servo1": random.randint(500, 2500),
-        "Servo2": random.randint(500, 2500),
-        "Servo3": random.randint(500, 2500),
-        "Servo4": random.randint(500, 2500),
-        "Servo5": random.randint(500, 2500),
+        "Time": random.randint(300, 500),
+        "Servo1": random.randint(1500, 2200),
+        "Servo2": random.randint(1500, 2200),
+        "Servo3": random.randint(1500, 2200),
+        "Servo4": random.randint(1500, 2200),
+        "Servo5": random.randint(1500, 2200),
         "Servo6": random.randint(1400, 1600),
     }])
     
