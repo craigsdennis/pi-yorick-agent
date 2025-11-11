@@ -13,7 +13,7 @@ board = Board()
 agc = ActionGroupController(board, action_path=os.getcwd())
 
 random_actions = list(filter(
-    lambda group: group.starts_with("random-"), 
+    lambda group: group.startswith("random-"), 
     utils.get_available_action_groups()
 ))
 
