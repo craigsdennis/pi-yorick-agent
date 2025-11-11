@@ -6,5 +6,6 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "elevenlabs",
+    "pyaudio>=0.2.14",
     "python-dotenv>=1.2.1",
 ]
