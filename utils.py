@@ -15,7 +15,7 @@ def get_available_action_groups():
     return [os.path.splitext(os.path.basename(f))[0] for f in files]
 
 def create_random_action_group():
-    create_action_group(uuid.uuid4(), [{
+    create_action_group("random-" + str(uuid.uuid4()), [{
         "Time": random.randint(300, 500),
         "Servo1": random.randint(1500, 2200),
         "Servo2": random.randint(1500, 2200),
