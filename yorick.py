@@ -12,10 +12,10 @@ import utils
 board = Board()
 agc = ActionGroupController(board, action_path=os.getcwd())
 
-random_actions = filter(
+random_actions = list(filter(
     lambda group: group.starts_with("random-"), 
     utils.get_available_action_groups()
-)
+))
 
 def move_randomly():
     actNum = random.choice(random_actions)
