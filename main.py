@@ -13,7 +13,7 @@ import yorick
 
 
 class AgentMotionController:
-    def __init__(self, interval_seconds: float = 2.5):
+    def __init__(self, interval_seconds: float = 1.0):
         self.interval_seconds = interval_seconds
         self._thread = None
         self._stop_event = threading.Event()
